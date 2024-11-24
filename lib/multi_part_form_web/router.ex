@@ -17,7 +17,7 @@ defmodule MultiPartFormWeb.Router do
   scope "/", MultiPartFormWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", TransferLive.Index, :index
   end
 
   # Other scopes may use custom stacks.

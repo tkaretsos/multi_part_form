@@ -1,0 +1,15 @@
+<.header>
+  Listing transfers
+  <:actions>
+    <.link patch={~p"/new"}>
+      <.button>New Transfer</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.table id="transfers" rows={@streams.transfers}>
+  <:col :let={{_id, transfer}} label="Origin"><%= transfer.origin.name %></:col>
+  <:col :let={{_id, transfer}} label="Destination"><%= transfer.destination.name %></:col>
+  <:col :let={{_id, transfer}} label="Item"><%= transfer.item_name %></:col>
+  <:col :let={{_id, transfer}} label="Quantity"><%= transfer.item_quantity %></:col>
+</.table>
